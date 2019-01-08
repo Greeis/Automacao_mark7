@@ -11,14 +11,15 @@ pipeline{
     }
     
     stages {
-        stage('Bundle'){
-            steps{
-                sh 'bundle install'
+        stage('Bundle') {
+            steps {
+                sh "bundle install"
             }
-            steps ('Run Features'){
-                sh 'bundle exec cucumber -p ci'
+        }
+        stage('Run Features') {
+            steps {
+                sh "bundle exec cucumber -p ci"
             }
-
         }
     }
 } 
