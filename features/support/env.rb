@@ -24,6 +24,8 @@ if @browser.eql?('headless') #se o browser existir faça
       browser: :remote,
       url: 'http://selenium:4444/wd/hub',
       desired_capabilities: caps
+      #docker run -d -p4444:4444 -p 59000:59000 selenium/standalone-chrome-debug
+      #alterar o nome do container para >docker rename 88ed36660ae2 selenium
     )
   end
 else
