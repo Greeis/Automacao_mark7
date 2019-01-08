@@ -14,7 +14,10 @@ pipeline{
             steps{
                 sh "bundle install"
             }
-
+            steps{
+                sh "bundle exec cucumber"
+            }
+            
         }
     }
 }
